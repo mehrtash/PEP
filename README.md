@@ -21,9 +21,17 @@ you want to run experiments.
     cd helpers
     python settings.py
     ```
-3. You can download the preprocessed ImageNet data that we used in this project from the 
+    which should create the following folder structure:
+    ```
+    ├── intermediate
+    │   ├── data
+    │   │   ├── arrays
+    │   │   └── sheets
+    │   └── models
+    └── raw
+    ```
+3. Download the preprocessed ImageNet data (center cropped) that we used in this project from the 
 following link:
-
 [Download Link](https://www.dropbox.com/sh/5nwkk693coegsr4/AACRBvEV_1micL5bBnmbPydea?dl=0)
 
 4. copy the folders imagenet_224 and imagenet_299 to the `[project_root]/intermediate/data/arrays/` folder.
@@ -37,7 +45,7 @@ form ImageNet website, put the JPEG images in `[project_root]/raw/imagenet_valid
 and then run the following codes for pre-processing:
 ```
 cd preprocessing
-python 1_single_crop_images.py
+python 1_resize_crop_images.py
 python 2_preprocess_y_val.py
 ```
 
