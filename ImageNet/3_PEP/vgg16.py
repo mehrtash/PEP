@@ -10,17 +10,8 @@ from sklearn.metrics import log_loss
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
-sys.path.append('..')
+sys.path.append('../..')
 from helpers.settings import arrays_folder, models_folder
-
-
-def top_k_accuracy(y_true, y_pred, k=1):
-    """From: https://github.com/chainer/chainer/issues/606
-    Expects both y_true and y_pred to be one-hot encoded.
-    """
-    argsorted_y = np.argsort(y_pred)[:, -k:]
-    return np.any(argsorted_y.T == y_true.argmax(axis=1), axis=0).mean()
-
 
 model = VGG16()
 model_uid = 'vgg16'
@@ -37,9 +28,6 @@ if __name__ == '__main__':
 
     n_batch = 50
     samples_per_batch = 50000 // n_batch
-
-    # todo: update the parameters
-    # todo: change the way we are saving nlls
 
     n_start_batch = 5
     n_selected_batch = 45
