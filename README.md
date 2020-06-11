@@ -94,8 +94,16 @@ python vgg16.py
 python vgg19.py
 ```
 #### Temperature Scaling
-
+To find the optimal temperature for pre-trained models
+run `ts.py` inside `ImageNet\4_temp_scaling\`
+```
+cd Imagenet\4_temp_scaling
+python ts.py
+```
 #### Analysis
+To compare baselines with PEP, and temperature scaling (Table 1 of the manuscript)
+run the notebooks inside `ImageNet\5_analysis`. The notebooks also
+draw reliability diagrams.
 
 ## MNIST and CIFAR-10 Experiments
 
