@@ -1,13 +1,13 @@
 import os
-import socket
-
-folders = list()
-host = socket.gethostname()
 
 # todo: change the following path
 project_root = '/home/mehrtash/ppe/'
 
+folders = list()
+
 raw_folder = os.path.join(project_root, 'raw')
+folders.append(raw_folder)
+
 intermediate_folder = os.path.join(project_root, 'intermediate')
 folders.append(intermediate_folder)
 
