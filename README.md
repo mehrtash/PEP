@@ -15,8 +15,10 @@ pip install -r requirements.txt
 
 ## Project setup
 
-
 ## ImageNet Experiments
+#### Figure 1
+
+![](assets/figure1.png)
 
 ## MNIST Experiments
 
