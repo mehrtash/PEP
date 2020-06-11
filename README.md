@@ -97,7 +97,7 @@ python vgg19.py
 To find the optimal temperature for pre-trained models
 run `ts.py` inside `ImageNet/4_temp_scaling\`
 ```
-cd Imagenet\4_temp_scaling
+cd Imagenet/4_temp_scaling
 python ts.py
 ```
 #### Analysis
