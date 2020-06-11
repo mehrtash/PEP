@@ -17,14 +17,6 @@ sys.path.append('..')
 from helpers.settings import arrays_folder, models_folder
 
 
-def top_k_accuracy(y_true, y_pred, k=1):
-    """From: https://github.com/chainer/chainer/issues/606
-    Expects both y_true and y_pred to be one-hot encoded.
-    """
-    argsorted_y = np.argsort(y_pred)[:, -k:]
-    return np.any(argsorted_y.T == y_true.argmax(axis=1), axis=0).mean()
-
-
 model = InceptionV3()
 model_uid = 'inceptionv3'
 
@@ -43,12 +35,9 @@ if __name__ == '__main__':
     n_batch = 50
     samples_per_batch = 50000 // n_batch
 
-    # todo: update the parameters
-    # todo: change the way we are saving nlls
     n_optimization_iterations = 20
     n_selected_batch = 5
     n_ensemble = 5
-    # todo: change the input sizes
     X = np.zeros((n_selected_batch * samples_per_batch, 299, 299, 3))
 
     y_val = y_val[:n_selected_batch * samples_per_batch]
