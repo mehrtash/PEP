@@ -36,6 +36,8 @@ following link:
 
 4. copy the folders imagenet_224 and imagenet_299 to the `[project_root]/intermediate/data/arrays/` folder.
 These are numpy arrays containing 50,000 validation images from ILSVRC2012.
+They are cropped and resized to sizes of 224 and 299 which are the sizes
+to our the ImageNet pre-trained networks that we are going to use.
 
 #### optional preprocessing
 Optionally, instead of running steps 3 and 4 you can create these arrays
