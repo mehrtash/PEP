@@ -61,9 +61,9 @@ could not install OpenCV.
 ## ImageNet Experiments
 ### Figure 1
 To reproduce the effect of PEP on pre-trained inception-V3 (Figure 1 in
-the manuscript), first run `1_perturb_inception.py` inside `ImageNet\1_figure1\`
+the manuscript), first run `1_perturb_inception.py` inside `ImageNet/1_figure1/`
 ```
-cd Imagenet\1_figure1
+cd Imagenet/1_figure1
 python 1_pertrub_inception.py
 ```
 Then open run jupyter notebook and run the cells inside `2_draw_chart.ipynb`.
@@ -72,7 +72,7 @@ The result is the following figure.
 
 ### Table 1 (PPE on Pre-trained ImageNet)
 #### Finding Optimal Sigmas
-For each of the pretrained networks run the code inside `ImageNet\2_optimal_sigma` folder:
+For each of the pretrained networks run the code inside `ImageNet/2_optimal_sigma` folder:
 ```
 cd ImageNet/2_optimal_sigma
 python densenet121.py
@@ -108,6 +108,16 @@ draw reliability diagrams.
 ## MNIST and CIFAR-10 Experiments
 
 ### Talbe 2
+To reproduce the results of Table 2 
+run the notebooks inside `MNIST_CIFAR10/1_Table2`. 
 
 ### Figure 3 (overfitting)
-
+To reproduce the realationship between overfitting and PPE, first run the following
+scripts:
+```
+cd MNIST_CIFAR10/2_overfitting
+python overfitting_mnist_mlp.py
+python overfitting_mnist_cnn.py
+python overfitting_cifar_cnn.py
+```
+Then open run jupyter notebook and run the cells inside `overfitting figures.ipynb`.
