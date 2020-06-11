@@ -50,10 +50,24 @@ cd preprocessing
 python 1_resize_crop_images.py
 python 2_preprocess_y_val.py
 ```
+Running preporcessing code requires `OpenCV` installation:
+```
+pip install opencv
+```
+Installing opencv on latest versions of conda can be tricky, so 
+we recommend to download the arrays (step 3 and 4 above) if you
+could not install OpenCV.
 
 ## ImageNet Experiments
 ### Figure 1
-
+To reproduce the effect of PEP on pre-trained inception-V3 (Figure 1 in
+the manuscript), first run `1_perturb_inception.py` inside `ImageNet\1_figure1\`
+```
+cd Imagenet\1_figure1
+python 1_pertrub_inception.py
+```
+Then open run jupyter notebook and run the cells inside `2_draw_chart.ipynb`.
+The result is the following figure.
 ![](assets/figure1.png)
 
 ### Finding Optimal Sigmas
