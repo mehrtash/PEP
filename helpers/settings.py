@@ -1,7 +1,6 @@
 import os
-
-# todo: change the following path
-project_root = '/home/mehrtash/ppe/'
+# todo: change the following path to the desired project root
+project_root = '.'
 
 folders = list()
 
