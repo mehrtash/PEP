@@ -1,7 +1,7 @@
 import os
 
 # todo: change the following path
-project_root = '/home/mehrtash/ppe_goh/'
+project_root = '/home/mehrtash/ppe/'
 
 folders = list()
 

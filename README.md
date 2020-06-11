@@ -70,15 +70,36 @@ Then open run jupyter notebook and run the cells inside `2_draw_chart.ipynb`.
 The result is the following figure.
 ![](assets/figure1.png)
 
-### Finding Optimal Sigmas
+### Table 1 (PPE on Pre-trained ImageNet)
+#### Finding Optimal Sigmas
+For each of the pretrained networks run the code inside `ImageNet\2_optimal_sigma` folder:
+```
+cd ImageNet/2_optimal_sigma
+python densenet121.py
+python densenet169.py
+python inceptionv3.py
+python resnet50.py
+python vgg16.py
+python vgg19.py
+```
+#### PEP
+For each of the pretrained networks run the code inside `ImageNet\3_PEP` folder:
+```
+cd ImageNet/3_PEP
+python densenet121.py
+python densenet169.py
+python inceptionv3.py
+python resnet50.py
+python vgg16.py
+python vgg19.py
+```
+#### Temperature Scaling
 
-### PEP
+#### Analysis
 
-### Analysis and comparison with Temperature Scaling
+## MNIST and CIFAR-10 Experiments
 
-## MNIST Experiments
+### Talbe 2
 
-## CIFAR-10 Experiments
-
-## Overfitting Experiments
+### Figure 3 (overfitting)
 
