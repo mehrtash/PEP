@@ -1,15 +1,12 @@
 import os
 import sys
 
-import datetime
 import numpy as np
+import pandas as pd
 from keras.applications.densenet import DenseNet121
 from keras.applications.densenet import preprocess_input
-
 from keras.utils import to_categorical
 from sklearn.metrics import log_loss
-from collections import OrderedDict
-import pandas as pd
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 
@@ -60,9 +57,9 @@ if __name__ == '__main__':
         y_test_pred_ensemble = np.zeros((n_ensemble, *y_test_batch.shape), dtype=np.float32)
         y_pred_base = model.predict(X_test_batch, verbose=1)
         nll_base = log_loss(y_test_batch, y_pred_base)
-        print('-'*100)
+        print('-' * 100)
         print('nll base {0:.4f}'.format(nll_base))
-        print('-'*100)
+        print('-' * 100)
         for seed_index, seed in enumerate(range(17, 17 + n_ensemble)):
             np.random.seed(seed)
             model.set_weights(ws)
@@ -79,9 +76,9 @@ if __name__ == '__main__':
             print('sigma: {0:.6f}, seed: {1}, nll: val {2:.4f}'.format(sigma_optimum, seed, nll_test))
         y_test_pred_ensemble_mean = np.mean(y_test_pred_ensemble, axis=0)
         nll_ensemble = log_loss(y_test_batch, y_test_pred_ensemble_mean)
-        print('-'*100)
-        print('nll ensemble {0:.4f}, improvement: {1:.4f}'.format(nll_ensemble, nll_base-nll_ensemble))
-        print('-'*100)
+        print('-' * 100)
+        print('nll ensemble {0:.4f}, improvement: {1:.4f}'.format(nll_ensemble, nll_base - nll_ensemble))
+        print('-' * 100)
         np.save(os.path.join(output_folder, 'y_test_' + str(i) + '.npy'), y_test_batch)
         np.save(os.path.join(output_folder, 'y_pred_base_' + str(i) + '.npy'), y_pred_base)
         np.save(os.path.join(output_folder, 'y_pred_ensemble_' + str(i) + '.npy'), y_test_pred_ensemble)

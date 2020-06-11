@@ -1,15 +1,12 @@
 import os
 import sys
 
-import datetime
 import numpy as np
+import pandas as pd
 from keras.applications.resnet50 import ResNet50
 from keras.applications.resnet50 import preprocess_input
-
 from keras.utils import to_categorical
 from sklearn.metrics import log_loss
-from collections import OrderedDict
-import pandas as pd
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
