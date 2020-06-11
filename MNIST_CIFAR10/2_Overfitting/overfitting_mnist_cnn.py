@@ -15,8 +15,8 @@ from sklearn.metrics import log_loss
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 sys.path.append('../..')
 
-from helpers.settings import project_root
-output_folder = os.path.join(project_root, 'mnist_cnn')
+from helpers.settings import models_folder
+output_folder = os.path.join(models_folder, 'mnist_cnn')
 output_baseline_folder = os.path.join(output_folder, 'baselines')
 
 

@@ -11,12 +11,12 @@ from keras.utils import to_categorical
 from keras.models import Sequential
 from keras.layers import Dense, BatchNormalization
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 sys.path.append('../..')
-from helpers.settings import project_root
+from helpers.settings import models_folder
 
-output_folder = os.path.join(project_root, 'mnist_mlp')
+output_folder = os.path.join(models_folder, 'mnist_mlp')
 output_baseline_folder = os.path.join(output_folder, 'baselines')
 
 
