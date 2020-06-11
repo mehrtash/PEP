@@ -16,9 +16,15 @@ pip install -r requirements.txt
 ## Project setup
 
 ## ImageNet Experiments
-#### Figure 1
+### Figure 1
 
 ![](assets/figure1.png)
+
+### Finding Optimal Sigmas
+
+### PEP
+
+### Analysis and comparison with Temperature Scaling
 
 ## MNIST Experiments
 
