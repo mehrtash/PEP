@@ -1,7 +1,7 @@
 # PEP: Parameter Ensembling by Perturbation
 
-This repository is the official implementation of **PEP: Parameter Ensembling by Perturbation**,
-which is under review at NeurIPS 2020.
+This repository is the official implementation of the NeurIPS 2020 paper **PEP: Parameter Ensembling by Perturbation**.
+
 <!-- > 📋Optional: include a graphic explaining your approach/main result, bibtex entry, link to demos, blog posts and tutorials
 -->
 
